@@ -1,0 +1,18 @@
+---
+const { title } = Astro.props;
+import '@fontsource-variable/lora';
+import '@fontsource-variable/work-sans';
+import "../styles/main.css"
+---
+<html lang="de-CH">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>{title}</title>
+</head>
+<body>
+<main>
+    <slot />
+</main>
+</body>
+</html>

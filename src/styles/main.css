@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+    name: "bergsommer";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
+
+    /* Primary - Intensives Grün #155724 */
+    --color-primary: oklch(35% 0.15 145);
+    --color-primary-content: oklch(100% 0 0);
+
+    /* Secondary - Leuchtendes Rot #D9534F */
+    --color-secondary: oklch(60% 0.20 25);
+    --color-secondary-content: oklch(100% 0 0);
+
+    /* Accent - Amber/Gold #F0AD4E */
+    --color-accent: oklch(75% 0.15 70);
+    --color-accent-content: oklch(20% 0.02 240);
+
+    /* Neutral - Dunkelgrau #1A1A1A */
+    --color-neutral: oklch(20% 0.02 240);
+    --color-neutral-content: oklch(100% 0 0);
+
+    /* Base - Weiss & Grautöne */
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(99% 0 0);
+    --color-base-300: oklch(96% 0 0);
+
+    /* Info/Sky - Blau #0275D8 */
+    --color-info: oklch(55% 0.25 240);
+    --color-info-content: oklch(100% 0 0);
+
+    /* Success - Wiesen-Grün #5CB85C */
+    --color-success: oklch(70% 0.18 145);
+    --color-success-content: oklch(100% 0 0);
+
+    /* Warning - Amber/Gold (wie Accent) #F0AD4E */
+    --color-warning: oklch(75% 0.15 70);
+    --color-warning-content: oklch(20% 0.02 240);
+
+    /* Error - Rot (wie Secondary) #D9534F */
+    --color-error: oklch(60% 0.20 25);
+    --color-error-content: oklch(100% 0 0);
+}
+
+/* Font Families */
+@theme {
+    --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Lora', ui-serif, Georgia, serif;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        font-weight: var(--font-weight-medium);
+    }
+}
+
+@utility container {
+    margin-inline: auto;
+}
