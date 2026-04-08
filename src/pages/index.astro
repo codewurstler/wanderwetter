@@ -11,8 +11,15 @@ const global = await directus.request(readSingleton("global"));
 <Layout title={global.title}>
     <main>
         <div>
-            <h1>{global.title}</h1>
-            <p>{global.description}</p>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h1>{global.title}</h1>
+                        <p>{global.description}</p>
+                        <button class="btn btn-primary">Willkommen!</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </Layout>
