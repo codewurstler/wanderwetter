@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import directus from "../../lib/directus";
+import {readItems } from "@directus/sdk";
+
+
+export async function getStaticPaths() {
+    const hikes = await directus.request(readItems("hikes"));
+    return hikes.map((hike) => ({
+        params: {slug: hike.slug},
+        props: hike,
+    }));
+}
+
+const hike = Astro.props;
+---
+<Layout title={hike.title}>
+    <main>
+        <div>
+            <h1>{hike.title}</h1>
+            <div set:html={hike.description} />
+            <div set:html={hike.komootEmbed} />
+        </div>
+    </main>
+</Layout>
