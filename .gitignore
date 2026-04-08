@@ -1,6 +1,8 @@
 # dev db
 database/
 uploads/
+extensions/
+
 # build output
 dist/
 
