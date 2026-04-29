@@ -1,0 +1,13 @@
+---
+const { colCount } = Astro.props;
+---
+<div class="astro-grid" style={`--col-count: ${colCount}`}>
+    <slot />
+</div>
+<style>
+    .astro-grid {
+        display: grid;
+        grid-template-columns: repeat(var(--col-count), 1fr);
+        gap: var(--pico-spacing);
+    }
+</style>

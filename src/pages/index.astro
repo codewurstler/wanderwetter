@@ -4,15 +4,69 @@ import Layout from '../layouts/Layout.astro';
 
 import directus from "../lib/directus";
 import {readItems, readSingleton} from "@directus/sdk";
+import Grid from "../components/Grid.astro";
 
 const global = await directus.request(readSingleton("global"));
 ---
 
 <Layout title={global.title}>
     <main>
-        <div>
+        <div class="container">
             <h1>{global.title}</h1>
             <p>{global.description}</p>
+            <button>Hallo</button>
+            <h1>Hallo</h1>
+            <Grid colCount="2">
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+            </Grid>
+            <Grid colCount="4">
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+            </Grid>
+            <Grid colCount="2">
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+                <article>
+                    <header>Header</header>
+                    Body
+                    <footer>Footer</footer>
+                </article>
+            </Grid>
         </div>
     </main>
 </Layout>
