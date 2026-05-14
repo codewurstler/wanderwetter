@@ -12,8 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.5.0",
     "@directus/sdk": "^21.2.2",
     "@picocss/pico": "^2.1.1",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.15.12",
     "astro": "^6.1.5",
     "directus-extension-wpslug-interface": "^1.1.0"
   },
